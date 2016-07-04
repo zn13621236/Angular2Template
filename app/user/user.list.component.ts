@@ -18,10 +18,10 @@ import {UserUpdateComponent} from './user.update.component';
 export class UserListComponent implements onInit {
 
     public users = [];
-    private sub: any;
-    private selectedId: number;
+    private sub:any;
+    private selectedId:number;
     public selectedUser:User;
-    public toUpdateUser: User;
+    public toUpdateUser:User;
 
     constructor(private _userService:UserService) {
         //  this.users = this._userListService.getUsers();
@@ -31,7 +31,7 @@ export class UserListComponent implements onInit {
         this.sub = this.router
             .routerState
             .queryParams
-            .subscribe((params)=>{
+            .subscribe((params)=> {
                 this.selectedId = +params['id'];
 
                 this.users = this._userService.getUsers();
@@ -48,15 +48,15 @@ export class UserListComponent implements onInit {
         this.selectedUser = user;
     }
 
-    public selectUpdateUser(user: User):void{
+    public selectUpdateUser(user:User):void {
         this.toUpdateUser = user;
     }
 
-    public clearUpdate(){
+    public clearUpdate() {
         this.toUpdateUser = null;
     }
 
-    public clearSelect(){
+    public clearSelect() {
         this.selectedUser = null;
     }
 }

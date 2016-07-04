@@ -6,7 +6,7 @@ import { provideRouter, RouterConfig }  from '@angular/router';
 //import {UserDetailComponent} from './user/user.detail.component';
 import { UserRoutes }       from './user/user.routes';
 
-export const routes: RouterConfig = [
+export const routes:RouterConfig = [
     ...UserRoutes,
 ];
 

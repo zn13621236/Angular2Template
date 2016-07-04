@@ -18,15 +18,15 @@ export class UserAddComponent {
     }
 
     public addUser(user:User) {
-        if(this.validateUser(user)) {
+        if (this.validateUser(user)) {
             this._userService.addOrUpdateUser(user);
-        }else{
+        } else {
             alert('userName or password cannot be empty!');
         }
     }
 
-    private validateUser(user: User): boolean {
-        return !(!user.userName||!user.passWord);
+    private validateUser(user:User):boolean {
+        return !(!user.userName || !user.passWord);
     }
 
 }

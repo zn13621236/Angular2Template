@@ -6,12 +6,12 @@ import{UserListComponent} from './user.list.component'
 import {UserDetailComponent} from './user.detail.component';
 
 
-export const UserRoutes: RouterConfig = [
+export const UserRoutes:RouterConfig = [
     {
         path: '',
         redirectTo: '/users',
         pathMatch: 'full'
     },
-    { path: 'users',  component: UserListComponent},
-    { path: 'user/:id', component: UserDetailComponent }
+    {path: 'users', component: UserListComponent},
+    {path: 'user/:id', component: UserDetailComponent}
 ];
