@@ -1,0 +1,28 @@
+<div>
+    <table>
+        <th>
+            user name
+        </th>
+        <th>
+            pass word
+        </th>
+        <th>gender</th>
+        <tr *ngFor="let user of users">
+            <td (click)="select(user)">
+                {{user.userName}}
+            </td>
+            <td>
+                {{user.passWord}}
+            </td>
+            <td>{{user.gender}}</td>
+            <td (click)="selectUpdateUser(user)">update</td>
+        </tr>
+    </table>
+
+    <button (click)="clearSelect()">Clean Selected</button>
+    <button (click)="clearUpdate()">Close Updated</button>
+
+</div>
+<user-detail *ngIf="selectedUser" [active_user]="selectedUser"></user-detail>
+<user-add></user-add>
+<user-update *ngIf="toUpdateUser" [user]="toUpdateUser"></user-update>
